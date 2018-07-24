@@ -17,3 +17,4 @@ class MultipleChoiceQuestion extends Component {
             )
     }
 }
+export default MultipleChoiceQuestion;

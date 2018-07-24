@@ -35,7 +35,11 @@ class App extends Component {
             event.stopPropagation();
             event.nativeEvent.stopImmediatePropagation();
             let x;
-              fetch(`https://opentdb.com/api.php?amount=${this.state.numQuestions}&category=${this.state.category}&difficulty=${this.state.difficulty}&type=${this.state.answerType}`).then(function(res) {
+              fetch(`https://opentdb.com/api.php?amount=${this.state.numQuestions}&category=${this.state.category}&difficulty=${this.state.difficulty}&type=${this.state.answerType}`).then(result=> result.json()).then(jsonedResult => jsonedResult.results).then(data => this.setState({ready: "true", questions: data}));
+              
+              
+              
+              /*.then(function(res) {
                  console.log('fetch done');
                   return res.json();
               }).then(function(result) {
@@ -48,7 +52,7 @@ class App extends Component {
               this.setState({
                 ready: true,
                 questions: x
-              });
+              });*/
         }
   render() {
     return (

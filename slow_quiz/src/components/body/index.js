@@ -1,24 +1,30 @@
 import React, { Component } from 'react';
+//import QuestionHandler from './questionHandler'
+
 
 class Body extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            question: this.props.questions,
+
         }
     }
     render() {
-   console.log(this.props.questions);
+        if(this.props.ready === "true") {
         return (
             <div>
-                <p> numquestions: {this.props.numQuestions} </p>
-                <p> category: {this.props.category} </p>
-                <p> difficulty: {this.props.difficulty} </p>
-                <p> answerType: {this.props.answerType} </p>
-                <p> ready: {this.props.ready} </p>
-                <p>questions: {} </p>
+                <p>quiz would have started...IF IT WORKED!</p>
             </div>)
+        }
+         
+        
+            return (
+         <div>
+                <p>quiz hasn't started yet!</p>
+            </div>
+        )
     }
+
 }
 
 export default Body;
