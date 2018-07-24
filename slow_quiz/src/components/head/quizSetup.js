@@ -3,37 +3,13 @@ import React, { Component } from 'react';
 import quizGet from '../../quizfetcher';
 
 class QuizSetup extends Component {
-        constructor(props) {
-            super(props);
-            this.state = {
-                numQuestions: "5",
-                category: "9",
-                difficulty: "easy",
-                answerType: "multiple",
-                ready: "false",
-                questions: ""
-            }
-            this.handleInputChange = this.handleInputChange.bind(this);
-            this.handleSubmit = this.handleSubmit.bind(this);
-        }
-        handleInputChange(event) {
-            const target = event.target;
-            const value = target.type === 'checkbox' ? target.checked : target.value;
-            const name = target.name;
-            this.setState({
-                [name]: value
-            });
-        }
-        handleSubmit(event) {
-            let fetchedQuestions = quizGet(this.state.numQuestions, this.state.category, this.state.difficulty, this.state.answerType);
-            console.log("I handled a submit click!");
-            this.setState({ready: "true", questions: fetchedQuestions});
-        }
+
+
         render(){
         return (
                 <form>
                 <label > # Questions:
-                    <select name="numQuestions" value={this.state.numQuestions} onChange={this.handleInputChange}>
+                    <select name="numQuestions" value={this.props.numQuestions} onChange={this.props.handleInputChange}>
                         <option value="5"> 5 </option>
                         <option value="10"> 10 </option>
                         <option value="15"> 15 </option>
@@ -41,7 +17,7 @@ class QuizSetup extends Component {
                     </select>
                     </label>
                     <label>Category:
-                        <select name="category" value={this.state.category} onChange={this.handleInputChange}>
+                        <select name="category" value={this.props.category} onChange={this.props.handleInputChange}>
                             <option value="9">general knowledge</option>
                             <option value="10">books</option>
                             <option value="11">film</option>
@@ -69,19 +45,19 @@ class QuizSetup extends Component {
                         </select>
                     </label>
                     <label> Difficulty:
-                        <select name="difficulty" value={this.state.difficulty} onChange={this.handleInputChange}>
+                        <select name="difficulty" value={this.props.difficulty} onChange={this.props.handleInputChange}>
                             <option value="easy">easy</option>
                             <option value="medium">medium</option>
                             <option value="hard">hard</option>
                         </select>
                     </label>
                     <label> Answer Type:
-                        <select name="answerType" value={this.state.answerType} onChange={this.handleInputChange}>
+                        <select name="answerType" value={this.props.answerType} onChange={this.props.handleInputChange}>
                             <option value="multiple">multiple choice</option>
                             <option value="boolean">true or false </option>
                         </select>
                     </label>
-                    <button type="submit" onClick={this.handleSubmit}> Start Quiz! </button>
+                    <button type="submit" onClick={this.props.handleSubmit}> Start Quiz! </button>
                 </form>
             )
     }}

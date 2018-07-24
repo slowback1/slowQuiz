@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Eczar|Roboto');
 
-
+@import 'reset';
 
 /* colors */
 
@@ -16,7 +16,10 @@ $colors_tertiary: black;
 $fonts_primary: Roboto, sans-serif;
 $fonts_secondary: Eczar, serif;
 
-
+.app {
+    margin: 0;
+    padding: 0;
+}
 
 /* header */
 .header_main {
@@ -91,19 +94,25 @@ $fonts_secondary: Eczar, serif;
     display: flex;
     background-color: $colors_primary;
     color: $colors_secondary;
-    flex-direction: row;
-    align-items: flex-end;
-    margin-top: 450px;
+    flex-direction: column;
+    margin-top: 455px;
     height: 140px;
     width: 100%;
     justify-content: space-between;
+    .footerBottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 }
+
 .footerInfo {
-    align-self: flex-start;
+    align-self: center;
 }
 .otdbLogo {
     img {
-        width: 180px;
+        width: 100px;
         height: auto;
     }
 }

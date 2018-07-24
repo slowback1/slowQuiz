@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Eczar|Roboto");
+* {
+  margin: 0;
+  padding: 0; }
+
+p, h1, h2, h3, h4, h5, h6, ol > li, ul > li {
+  font-size: 16px; }
+
 /* colors */
 /* fonts */
+.app {
+  margin: 0;
+  padding: 0; }
+
 /* header */
 .header_main {
   display: flex;
@@ -58,18 +69,22 @@ form {
   display: flex;
   background-color: #353b68;
   color: #e5deda;
-  flex-direction: row;
-  align-items: flex-end;
-  margin-top: 450px;
+  flex-direction: column;
+  margin-top: 455px;
   height: 140px;
   width: 100%;
   justify-content: space-between; }
+  .footer .footerBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end; }
 
 .footerInfo {
-  align-self: flex-start; }
+  align-self: center; }
 
 .otdbLogo img {
-  width: 180px;
+  width: 100px;
   height: auto; }
 
 /*# sourceMappingURL=output.css.map */

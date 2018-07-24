@@ -7,11 +7,13 @@ class Footer extends Component {
     render() {
         return (
                 <div className="footer">
-                    <SocialLinks />
-                    <div className="footerInfo">
+                  <div className="footerInfo">
                         <h2>SlowQuiz is built and mantained by Andrew Wobeck </h2>
                     </div>
-                    <OtdbLogo />
+                    <div className="footerBottom">
+                        <SocialLinks />
+                        <OtdbLogo />
+                    </div>
                 </div>
             )
     }
