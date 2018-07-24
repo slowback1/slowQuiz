@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Eczar|Roboto");
+/* colors */
+/* fonts */
+/* header */
+.header_main {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  height: 15%;
+  width: 100%;
+  background-color: #353b68;
+  color: #e5deda; }
+
+/* headerNavigation */
+.headerInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .headerInfo h1 {
+    margin: 15px 0 2px 0;
+    padding: 0; }
+  .headerInfo h3 {
+    margin: 0 0 10px 0;
+    padding: 0; }
+
+/* quiz setup */
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  form label {
+    margin: 0 10px 0 10px;
+    padding: 0 0 10px 0; }
+  form select {
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: #e5deda; }
+  form button {
+    background-color: #353b68;
+    box-shadow: 1px 1px #e5deda;
+    color: #e5deda;
+    padding: 10px;
+    align-self: flex-end;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    border-radius: 4px; }
+  form button:hover {
+    cursor: pointer;
+    background-color: #e5deda;
+    color: #353b68;
+    transition: 0.5s;
+    box-shadow: 1px 1px #353b68; }
+
+/* footer */
+.footer {
+  margin: 0;
+  display: flex;
+  background-color: #353b68;
+  color: #e5deda;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-top: 450px;
+  height: 140px;
+  width: 100%;
+  justify-content: space-between; }
+
+.footerInfo {
+  align-self: flex-start; }
+
+.otdbLogo img {
+  width: 180px;
+  height: auto; }
+
+/*# sourceMappingURL=output.css.map */

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Eczar|Roboto');
+
+
+
+/* colors */
+
+$colors_primary:  #353b68;
+$colors_secondary: #e5deda;
+$colors_tertiary: black;
+
+
+
+
+/* fonts */
+
+$fonts_primary: Roboto, sans-serif;
+$fonts_secondary: Eczar, serif;
+
+
+
+/* header */
+.header_main {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    height: 15%;
+    width: 100%;
+    background-color: $colors_primary;
+    color: $colors_secondary;
+}
+/* headerNavigation */
+
+.headerInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h1 {
+        margin: 15px 0 2px 0;
+        padding: 0;
+    }
+    h3 {
+        margin: 0 0 10px 0;
+        padding: 0;
+    }
+}
+/* quiz setup */
+    form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        label {
+            margin: 0 10px 0 10px;
+            padding: 0 0 10px 0;
+        }
+        select {
+            width: 100%; 
+            padding: 10px 10px;
+            border-radius: 5px;
+            background-color: $colors_secondary;
+        }
+        button {
+            background-color: $colors_primary;
+            box-shadow: 1px 1px  $colors_secondary;
+            color: $colors_secondary;
+            padding: 10px;
+            align-self: flex-end;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            border-radius: 4px;
+        } button:hover {
+            cursor: pointer;
+            background-color: $colors_secondary;
+            color: $colors_primary;
+            transition: 0.5s;
+            box-shadow: 1px 1px $colors_primary;
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+/* footer */
+
+.footer {
+    margin: 0;
+    display: flex;
+    background-color: $colors_primary;
+    color: $colors_secondary;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 450px;
+    height: 140px;
+    width: 100%;
+    justify-content: space-between;
+}
+.footerInfo {
+    align-self: flex-start;
+}
+.otdbLogo {
+    img {
+        width: 180px;
+        height: auto;
+    }
+}
