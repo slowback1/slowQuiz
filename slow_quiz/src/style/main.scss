@@ -1,85 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Eczar|Roboto');
 
+@import '_variables';
 @import 'reset';
-
-/* colors */
-
-$colors_primary:  #353b68;
-$colors_secondary: #e5deda;
-$colors_tertiary: black;
+@import '_quizSetup';
+@import '_header';
+@import '_footer';
+@import '_questions';
 
 
 
-
-/* fonts */
-
-$fonts_primary: Roboto, sans-serif;
-$fonts_secondary: Eczar, serif;
-
-.app {
-    margin: 0;
-    padding: 0;
-}
-
-/* header */
-.header_main {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    height: 15%;
-    width: 100%;
-    background-color: $colors_primary;
-    color: $colors_secondary;
-}
-/* headerNavigation */
-
-.headerInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    h1 {
-        margin: 15px 0 2px 0;
-        padding: 0;
-    }
-    h3 {
-        margin: 0 0 10px 0;
-        padding: 0;
-    }
-}
-/* quiz setup */
-    form {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        
-        label {
-            margin: 0 10px 0 10px;
-            padding: 0 0 10px 0;
-        }
-        select {
-            width: 100%; 
-            padding: 10px 10px;
-            border-radius: 5px;
-            background-color: $colors_secondary;
-        }
-        button {
-            background-color: $colors_primary;
-            box-shadow: 1px 1px  $colors_secondary;
-            color: $colors_secondary;
-            padding: 10px;
-            align-self: flex-end;
-            margin-bottom: 10px;
-            margin-left: 20px;
-            border-radius: 4px;
-        } button:hover {
-            cursor: pointer;
-            background-color: $colors_secondary;
-            color: $colors_primary;
-            transition: 0.5s;
-            box-shadow: 1px 1px $colors_primary;
-        }
-    }
     
     
     
@@ -87,32 +16,3 @@ $fonts_secondary: Eczar, serif;
     
     
     
-/* footer */
-
-.footer {
-    margin: 0;
-    display: flex;
-    background-color: $colors_primary;
-    color: $colors_secondary;
-    flex-direction: column;
-    margin-top: 455px;
-    height: 140px;
-    width: 100%;
-    justify-content: space-between;
-    .footerBottom {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-}
-
-.footerInfo {
-    align-self: center;
-}
-.otdbLogo {
-    img {
-        width: 100px;
-        height: auto;
-    }
-}

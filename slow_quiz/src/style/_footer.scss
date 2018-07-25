@@ -1,0 +1,29 @@
+/* footer */
+
+.footer {
+    margin: 0;
+    display: flex;
+    background-color: $colors_primary;
+    color: $colors_secondary;
+    flex-direction: column;
+    margin-top: 455px;
+    height: 140px;
+    width: 100%;
+    justify-content: space-between;
+    .footerBottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+.footerInfo {
+    align-self: center;
+}
+.otdbLogo {
+    img {
+        width: 100px;
+        height: auto;
+    }
+}

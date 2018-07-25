@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
 
 
-class BooleanQuestion extends Component {
+const BooleanQuestion = () => {
     
-    render() {
+    const questionCellsTF = this.props.questions.map(question => {
+        let questionStatement = question.question;
         return (
-            <div className="question">
-                <div className="questionName">
-                    <h2>{this.props.question.question}</h2>
+                <div className="question">
+                    <div className="questionTitle">{questionStatement}</div>
+                    <div className="answers trueFalseAnswers">
+                        <div className="answer" value="true">true</div>
+                        <div className="answer" value="false">false</div>
+                    </div>
                 </div>
-                <div className="answerSection">
-                    <div className="answer" value="true" onClick={this.props.handleAnswer}><p>True</p></div>
-                    <div className="answer" value="false" onClick={this.props.handleAnswer}><p>False</p></div>
-                </div>
+            )
+    });
+
+        return (
+            <div className="questionWrapper">
+                {questionCellsTF}
             </div>
             )
     }
-}
+
 
 export default BooleanQuestion;

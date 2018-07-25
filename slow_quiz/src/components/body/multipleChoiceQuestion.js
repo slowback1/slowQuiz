@@ -1,20 +1,50 @@
 import React, { Component } from 'react';
 
-class MultipleChoiceQuestion extends Component {
-    render() {
-        return (
-                <div className="question">
-                    <div className="questionName">
-                        <h2>{this.props.question.question}</h2>
+function MultipleChoiceQuestions(questions) {
+
+    const questionCellsMC = questions.map(question => {
+        let questionStatement = question.question;
+        console.log(question);
+        let randomSeed = Math.floor(Math.random() * 3);
+        let answers = [];
+        let incorrectAnswerCount = 0;
+        for (var i = 0; i < 4; i++) {
+            if(i == randomSeed) {
+                answers.push(question.correct_answer);
+            } else {
+                answers.push(question.incorrect_answers[incorrectAnswerCount]);
+                incorrectAnswerCount += 1;
+            }
+        }
+        const answersMC = answers.map(answer => {
+            return (
+                    <div className="answer" value={answer}>
+                        {answer}
                     </div>
-                    <div className="answerSection">
-                        <div className="answer" value={this.props.question.answer[0]} onClick={this.props.handleAnswer}><p>{this.props.question.answer[0]}</p></div>
-                        <div className="answer" value={this.props.question.answer[1]} onClick={this.props.handleAnswer}><p>{this.props.question.answer[1]}</p></div>
-                        <div className="answer" value={this.props.question.answer[2]} onClick={this.props.handleAnswer}><p>{this.props.question.answer[2]}</p></div>
-                        <div className="answer" value={this.props.question.answer[3]} onClick={this.props.handleAnswer}><p>{this.props.question.answer[3]}</p></div>
+                )
+        });
+        return (
+                            <div className="question">
+                    <div className="questionTitle">{questionStatement}</div>
+                    <div className="answers multipleChoiceAnswers">
+                        {answersMC}
                     </div>
                 </div>
             )
+    });
+
+        return (
+                <div className="questionWrapper">
+                    {questionCellsMC}
+                </div>
+            )
     }
-}
+    class MultipleChoiceQuestion extends Component {
+        render() {
+            return(
+                    <div>{MultipleChoiceQuestions(this.props.questions)}</div>
+                )
+        }
+    }
+
 export default MultipleChoiceQuestion;

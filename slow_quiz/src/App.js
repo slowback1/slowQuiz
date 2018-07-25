@@ -32,10 +32,8 @@ class App extends Component {
           
           handleSubmit(event) {
             event.preventDefault();
-            event.stopPropagation();
-            event.nativeEvent.stopImmediatePropagation();
-            let x;
-              fetch(`https://opentdb.com/api.php?amount=${this.state.numQuestions}&category=${this.state.category}&difficulty=${this.state.difficulty}&type=${this.state.answerType}`).then(result=> result.json()).then(jsonedResult => jsonedResult.results).then(data => this.setState({ready: "true", questions: data}));
+              
+              fetch(`https://opentdb.com/api.php?amount=${this.state.numQuestions}&category=${this.state.category}&difficulty=${this.state.difficulty}&type=${this.state.answerType}`).then(result=> result.json()).then(jsonedResult => jsonedResult.results).then(data => this.setState({ready: "true", questions: data})).then(consoleData => console.log(this.state.questions));
               
               
               

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import QuestionHandler from './questionHandler'
+import QuestionHandler from './questionHandler'
 
 
 class Body extends Component {
@@ -13,7 +13,7 @@ class Body extends Component {
         if(this.props.ready === "true") {
         return (
             <div>
-                <p>quiz would have started...IF IT WORKED!</p>
+                <QuestionHandler questions={this.props.questions} answerType={this.props.answerType} />
             </div>)
         }
          

@@ -1,0 +1,33 @@
+/* quiz setup */
+    form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        label {
+            margin: 0 10px 0 10px;
+            padding: 0 0 10px 0;
+        }
+        select {
+            width: 100%; 
+            padding: 10px 10px;
+            border-radius: 5px;
+            background-color: $colors_secondary;
+        }
+        button {
+            background-color: $colors_primary;
+            box-shadow: 1px 1px  $colors_secondary;
+            color: $colors_secondary;
+            padding: 10px;
+            align-self: flex-end;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            border-radius: 4px;
+        } button:hover {
+            cursor: pointer;
+            background-color: $colors_secondary;
+            color: $colors_primary;
+            transition: 0.5s;
+            box-shadow: 1px 1px $colors_primary;
+        }
+    }

@@ -1,38 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Eczar|Roboto");
+/* colors */
+/* fonts */
 * {
   margin: 0;
   padding: 0; }
 
 p, h1, h2, h3, h4, h5, h6, ol > li, ul > li {
   font-size: 16px; }
-
-/* colors */
-/* fonts */
-.app {
-  margin: 0;
-  padding: 0; }
-
-/* header */
-.header_main {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-around;
-  height: 15%;
-  width: 100%;
-  background-color: #353b68;
-  color: #e5deda; }
-
-/* headerNavigation */
-.headerInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  .headerInfo h1 {
-    margin: 15px 0 2px 0;
-    padding: 0; }
-  .headerInfo h3 {
-    margin: 0 0 10px 0;
-    padding: 0; }
 
 /* quiz setup */
 form {
@@ -63,6 +37,28 @@ form {
     transition: 0.5s;
     box-shadow: 1px 1px #353b68; }
 
+/* header */
+.header_main {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  height: 15%;
+  width: 100%;
+  background-color: #353b68;
+  color: #e5deda; }
+
+/* headerNavigation */
+.headerInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .headerInfo h1 {
+    margin: 15px 0 2px 0;
+    padding: 0; }
+  .headerInfo h3 {
+    margin: 0 0 10px 0;
+    padding: 0; }
+
 /* footer */
 .footer {
   margin: 0;
@@ -86,5 +82,42 @@ form {
 .otdbLogo img {
   width: 100px;
   height: auto; }
+
+.questionWrapper {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.question {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  height: 150px;
+  border-radius: 10px;
+  border: 1px solid black; }
+  .question .questionTitle {
+    background-color: #353b68;
+    color: #e5deda;
+    height: 40%;
+    text-align: center;
+    padding-top: 2%; }
+  .question .answers {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .question .answers .answer {
+      padding: 10px 20px 10px 20px;
+      margin: 0 1%;
+      background-color: black;
+      width: 40%;
+      color: #e5deda;
+      border-radius: 10px;
+      border: 1px solid #e5deda; }
+  .question .multipleChoiceAnswers {
+    width: 100%; }
 
 /*# sourceMappingURL=output.css.map */
