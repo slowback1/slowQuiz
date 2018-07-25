@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import decodeHtml from './decoder';
 
 function MultipleChoiceQuestions(questions) {
 
     const questionCellsMC = questions.map(question => {
-        let questionStatement = question.question;
+        let questionStatement = decodeHtml(question.question);
         console.log(question);
         let randomSeed = Math.floor(Math.random() * 3);
         let answers = [];
@@ -17,9 +18,10 @@ function MultipleChoiceQuestions(questions) {
             }
         }
         const answersMC = answers.map(answer => {
+            let decodedAnswer = decodeHtml(answer);
             return (
-                    <div className="answer" value={answer}>
-                        {answer}
+                    <div className="answer" value={decodedAnswer}>
+                        {decodedAnswer}
                     </div>
                 )
         });

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import decodeHtml from './decoder';
 
-
-const BooleanQuestion = () => {
+function BooleanQuestions(questions) {
     
-    const questionCellsTF = this.props.questions.map(question => {
-        let questionStatement = question.question;
+    const questionCellsTF = questions.map(question => {
+        let questionStatement = decodeHtml(question.question);
         return (
                 <div className="question">
                     <div className="questionTitle">{questionStatement}</div>
@@ -22,6 +22,12 @@ const BooleanQuestion = () => {
             </div>
             )
     }
-
+class BooleanQuestion extends Component {
+    render() {
+        return (
+                <div>{BooleanQuestions(this.props.questions)}</div>
+            )
+    }
+}
 
 export default BooleanQuestion;

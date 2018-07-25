@@ -11,10 +11,12 @@
     display:flex;
     flex-direction: column;
     margin: 20px;
-    height: 150px;
+    min-height: 150px;
     border-radius: 10px;
     border: 1px solid $colors_tertiary;
     .questionTitle {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
         background-color: $colors-primary;
         color: $colors_secondary;
         height: 40%;
@@ -28,14 +30,21 @@
         flex-wrap: wrap;
         .answer {
             padding: 10px 20px 10px 20px;
-            margin: 0 1%;
+            text-align: center;
+            margin: 0 1.3%;
+            margin-bottom: 4px;
             background-color: $colors_tertiary;
             width: 40%;
             color: $colors_secondary;
             border-radius: 10px;
             border: 1px solid $colors_secondary;
+        } .answer:hover {
+            background-color: $colors_secondary;
+            color: $colors_tertiary;
+            cursor: pointer;
+            transition: 0.5s;
         }
-    }
+    } 
     
     .multipleChoiceAnswers {
         width: 100%;

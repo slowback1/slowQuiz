@@ -3,7 +3,7 @@ import BooleanQuestion from './booleanQuestion';
 import MultipleChoiceQuestion from './multipleChoiceQuestion';
 
 
-const QuestionHandle = (answerType, questions) => {
+function QuestionHandle(answerType, questions) {
         if(answerType == "boolean") {
             return(<BooleanQuestion questions={questions}/>);
         }
@@ -14,13 +14,12 @@ const QuestionHandle = (answerType, questions) => {
 }
 
 class QuestionHandler extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
-        return(
-        <MultipleChoiceQuestion questions={this.props.questions}/>
         
+        return(
+            <div>
+        {QuestionHandle(this.props.answerType, this.props.questions)}
+        </div>
         )
     }
 }
