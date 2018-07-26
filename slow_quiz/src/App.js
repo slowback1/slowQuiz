@@ -14,11 +14,14 @@ class App extends Component {
                 difficulty: "easy",
                 answerType: "multiple",
                 ready: "false",
-                questions: {}
+                questions: {},
+                currentQuestion: 0,
+                correctAnswers: 0,
+                answeredAnswers: 0
             }
             this.handleInputChange = this.handleInputChange.bind(this);
             this.handleSubmit = this.handleSubmit.bind(this);
-
+            this.handleAnswer = this.handleAnswer.bind(this);
         }
         handleInputChange(event) {
             const target = event.target;
@@ -28,12 +31,30 @@ class App extends Component {
                 [name]: value
             });
         }
+            handleAnswer(answer, correctAnswer) {
+
+        console.log(correctAnswer);
+        console.log(answer);
+
+        //eslint-disable-next-line
+        if(answer === correctAnswer) {
+            this.setState({correctAnswers: this.state.correctAnswers + 1});
+        } this.setState({answeredAnswers: this.state.answeredAnswers + 1});
+        document.getElementById(`question_${this.state.currentQuestion}`).setAttribute("style", "display: none");
+        //eslint-disable-next-line
+        if(document.getElementById(`question_${this.state.currentQuestion+1}`) != null || document.getElementById(`question_${this.state.currentQuestion+1}`) != undefined) {
+            document.getElementById(`question_${this.state.currentQuestion+1}`).setAttribute("style", "display: block");
+        }
+        this.setState({currentQuestion: this.state.currentQuestion + 1})
+    }
           
           
           handleSubmit(event) {
             event.preventDefault();
-              
-              fetch(`https://opentdb.com/api.php?amount=${this.state.numQuestions}&category=${this.state.category}&difficulty=${this.state.difficulty}&type=${this.state.answerType}`).then(result=> result.json()).then(jsonedResult => jsonedResult.results).then(data => this.setState({ready: "true", questions: data})).then(consoleData => console.log(this.state.questions));
+              if(this.state.currentQuestion > 0) {
+                document.getElementById("question_0").setAttribute("style", "display: block");
+              }
+              fetch(`https://opentdb.com/api.php?amount=${this.state.numQuestions}&category=${this.state.category}&difficulty=${this.state.difficulty}&type=${this.state.answerType}`).then(result=> result.json()).then(jsonedResult => jsonedResult.results).then(data => this.setState({ready: "true", currentQuestion: 0, questions: data})).then(consoleData => console.log(this.state.questions));
               
               
               
@@ -56,7 +77,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header handleSubmit={this.handleSubmit.bind(this)} handleInputChange={this.handleInputChange.bind(this)} numQuestions={this.state.numQuestions} category={this.state.category} difficulty={this.state.difficulty} answerType={this.state.answerType} ready={this.state.ready} questions={this.state.questions}/>
-        <Body numQuestions={this.state.numQuestions} category={this.state.category} difficulty={this.state.difficulty} answerType={this.state.answerType} ready={this.state.ready} questions={this.state.questions} />
+        <Body numQuestions={this.state.numQuestions} category={this.state.category} difficulty={this.state.difficulty} answerType={this.state.answerType} ready={this.state.ready} questions={this.state.questions} currentQuestion={this.state.currentQuestion} answeredAnswers={this.state.answeredAnswers} correctAnswers={this.state.correctAnswers} handleAnswer={this.handleAnswer.bind(this)} />
         <Footer />
       </div>
     )

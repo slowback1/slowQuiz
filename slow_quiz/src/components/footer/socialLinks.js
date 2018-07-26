@@ -6,7 +6,7 @@ class SocialLinks extends Component {
     render() {
         return (
                 <div className="socialLinks">
-                    <img src={GithubIcon} alt="a"/>
+                    <a href="https://github.com/slowback1/slowQuiz"><img src={GithubIcon} alt="a"/></a>
                 </div>
             )
     } 

@@ -3,12 +3,13 @@ import BooleanQuestion from './booleanQuestion';
 import MultipleChoiceQuestion from './multipleChoiceQuestion';
 
 
-function QuestionHandle(answerType, questions) {
+function QuestionHandle(answerType, questions, handleAnswer) {
+        //eslint-disable-next-line
         if(answerType == "boolean") {
-            return(<BooleanQuestion questions={questions}/>);
+            return(<BooleanQuestion questions={questions} handleAnswer={handleAnswer}/>);
         }
         else {
-            return(<MultipleChoiceQuestion questions={questions}/>);
+            return(<MultipleChoiceQuestion questions={questions} handleAnswer={handleAnswer}/>);
         }
     
 }
@@ -18,7 +19,7 @@ class QuestionHandler extends Component {
         
         return(
             <div>
-        {QuestionHandle(this.props.answerType, this.props.questions)}
+        {QuestionHandle(this.props.answerType, this.props.questions, this.props.handleAnswer)}
         </div>
         )
     }

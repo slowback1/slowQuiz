@@ -3,17 +3,13 @@ import QuestionHandler from './questionHandler'
 
 
 class Body extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        }
-    }
     render() {
+        //eslint-disable-next-line
         if(this.props.ready === "true") {
         return (
             <div>
-                <QuestionHandler questions={this.props.questions} answerType={this.props.answerType} />
+                <p>You've correctly answered {this.props.correctAnswers} out of {this.props.answeredAnswers} so far.</p>
+                <QuestionHandler questions={this.props.questions} answerType={this.props.answerType} handleAnswer={this.props.handleAnswer}/>
             </div>)
         }
          
