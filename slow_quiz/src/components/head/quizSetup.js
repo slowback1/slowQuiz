@@ -6,6 +6,7 @@ class QuizSetup extends Component {
 
 
         render(){
+            if(this.props.page === 0) {
         return (
                 <form>
                 <label > # Questions:
@@ -59,7 +60,12 @@ class QuizSetup extends Component {
                     </label>
                     <button type="submit" onClick={this.props.handleSubmit}> Start Quiz! </button>
                 </form>
-            )
+            )} else {
+                return (
+                        <div>
+                        </div>
+                    )
+            }
     }}
 
 export default QuizSetup;
