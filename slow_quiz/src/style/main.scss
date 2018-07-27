@@ -8,7 +8,9 @@
 @import '_questions';
 @import '_defaultQuestionHidden';
 
-
+@media screen and (max-width: 680px) {
+    @import './mobile/mobileMain';
+}
     
     
     

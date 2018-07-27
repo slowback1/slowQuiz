@@ -1,0 +1,26 @@
+.questionWrapper {
+    width: 95%;
+    margin-left: 2.5%;
+}
+.question {
+    min-height: 280px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.answers {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+    .answer {
+        padding: 0;
+        margin: 0;
+        background-color: red;
+        color: blue;
+        text-align: left;
+        border: none;
+    }
