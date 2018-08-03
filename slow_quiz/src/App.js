@@ -18,7 +18,8 @@ class App extends Component {
                 currentQuestion: 0,
                 correctAnswers: 0,
                 answeredAnswers: 0,
-                page: 0
+                page: 0,
+                setupShown: true
             }
             this.handleInputChange = this.handleInputChange.bind(this);
             this.handleSubmit = this.handleSubmit.bind(this);
@@ -81,7 +82,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header handleSubmit={this.handleSubmit.bind(this)} handleInputChange={this.handleInputChange.bind(this)} numQuestions={this.state.numQuestions} category={this.state.category} difficulty={this.state.difficulty} answerType={this.state.answerType} ready={this.state.ready} questions={this.state.questions} handlePageNavigation={this.handlePageNavigation.bind(this)} page={this.state.page}/>
+        <Header handleSubmit={this.handleSubmit.bind(this)} handleInputChange={this.handleInputChange.bind(this)} numQuestions={this.state.numQuestions} category={this.state.category} difficulty={this.state.difficulty} answerType={this.state.answerType} ready={this.state.ready} questions={this.state.questions} handlePageNavigation={this.handlePageNavigation.bind(this)} page={this.state.page} setupShown={this.state.setupShown}/>
         <Body numQuestions={this.state.numQuestions} category={this.state.category} difficulty={this.state.difficulty} answerType={this.state.answerType} ready={this.state.ready} questions={this.state.questions} currentQuestion={this.state.currentQuestion} answeredAnswers={this.state.answeredAnswers} correctAnswers={this.state.correctAnswers} handleAnswer={this.handleAnswer.bind(this)} page={this.state.page} />
         <Footer />
       </div>

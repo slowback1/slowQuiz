@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import QuestionHandler from './quiz/questionHandler'
 import About from './about/about';
+import Chart from './chart/chart';
 
 class Body extends Component {
     render() {
