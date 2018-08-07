@@ -39,14 +39,14 @@ class App extends Component {
         }
             handleAnswer(answer, correctAnswer) {
 
-        console.log(correctAnswer);
-        console.log(answer);
+
 
         //eslint-disable-next-line
         if(answer === correctAnswer) {
             this.setState({correctAnswers: this.state.correctAnswers + 1});
         } this.setState({answeredAnswers: this.state.answeredAnswers + 1});
         document.getElementById(`question_${this.state.currentQuestion}`).setAttribute("style", "display: none");
+        console.log(document.getElementById(`question_${this.state.currentQuestion+1}`));
         //eslint-disable-next-line
         if(document.getElementById(`question_${this.state.currentQuestion+1}`) != null || document.getElementById(`question_${this.state.currentQuestion+1}`) != undefined) {
             document.getElementById(`question_${this.state.currentQuestion+1}`).setAttribute("style", "display: block");
@@ -60,7 +60,7 @@ class App extends Component {
               if(this.state.currentQuestion > 0) {
                 document.getElementById("question_0").setAttribute("style", "display: block");
               }
-              fetch(`https://opentdb.com/api.php?amount=${this.state.numQuestions}&category=${this.state.category}&difficulty=${this.state.difficulty}&type=${this.state.answerType}`).then(result=> result.json()).then(jsonedResult => jsonedResult.results).then(data => this.setState({ready: "true", currentQuestion: 0, questions: data})).then(consoleData => console.log(this.state.questions));
+              fetch(`https://opentdb.com/api.php?amount=${this.state.numQuestions}&category=${this.state.category}&difficulty=${this.state.difficulty}&type=${this.state.answerType}`).then(result=> result.json()).then(jsonedResult => jsonedResult.results).then(data => this.setState({ready: "true", currentQuestion: 0, questions: data})).then(consoleData => console.log('done did the fetch'));
               
               
               

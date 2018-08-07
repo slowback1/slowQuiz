@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import QuestionHandler from './quiz/questionHandler'
 import About from './about/about';
-import Chart from './chart/chart';
+import Chart from './chart/pieChart';
 
 class Body extends Component {
     render() {
@@ -13,6 +13,7 @@ class Body extends Component {
                 <div>
                     <p>You've correctly answered {this.props.correctAnswers} out of {this.props.answeredAnswers} so far.</p>
                     <QuestionHandler questions={this.props.questions} answerType={this.props.answerType} handleAnswer={this.props.handleAnswer}/>
+                   <Chart />
                 </div>)
             }
              
