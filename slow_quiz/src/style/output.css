@@ -116,7 +116,7 @@ form {
   flex-direction: column;
   margin: 20px;
   border-radius: 10px;
-  border: 1px solid #696969; }
+  border: 1px solid #3e579b; }
   .question .questionTitle {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -136,14 +136,14 @@ form {
       text-align: center;
       padding: 10px 0;
       margin-bottom: 0;
-      background-color: #696969;
+      background-color: #3e579b;
       width: 100%;
       color: #e5deda;
       border-radius: 10px;
       border: 1px solid #e5deda; }
     .question .answers .answer:hover {
       background-color: #e5deda;
-      color: #696969;
+      color: #3e579b;
       cursor: pointer;
       transition: 0.5s; }
 
@@ -207,6 +207,46 @@ form {
 #question_19 {
   display: none; }
 
+.aboutPage {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 45%;
+  margin: 20px auto;
+  background-color: #e3e4e8;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 2px 1px 5px 1px #353b68;
+  padding-bottom: 5em; }
+  .aboutPage h1 {
+    font-size: 24px;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    color: #e5deda;
+    background-color: #353b68;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+  .aboutPage h2 {
+    font-size: 16px;
+    padding-left: 2em;
+    font-family: Eczar, serif;
+    color: #e5deda;
+    background-color: #3e579b; }
+  .aboutPage p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em; }
+    .aboutPage p a {
+      color: #353b68;
+      text-decoration: none; }
+  .aboutPage ul {
+    margin-left: 2em;
+    list-style-position: inside;
+    list-style-type: square;
+    color: #353b68; }
+    .aboutPage ul li {
+      margin-top: 1em; }
+
 @media screen and (max-width: 680px) {
   .header_main {
     height: 20%; }
@@ -253,6 +293,18 @@ form {
     background-color: red;
     color: blue;
     text-align: left;
-    border: none; } }
+    border: none; }
+
+  .aboutPage {
+    width: 100%;
+    border-radius: 0; }
+    .aboutPage h1 {
+      border-radius: 0; } }
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle; }
+
+.arc path {
+  stroke: #fff; }
 
 /*# sourceMappingURL=output.css.map */

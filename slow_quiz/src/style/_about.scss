@@ -1,0 +1,60 @@
+.aboutPage {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 45%;
+    margin: 20px auto;
+    background-color: $colors_quarterary;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 2px 1px 5px 1px $colors_primary;
+    padding-bottom: 5em;
+    h1 {
+        font-size: 24px;
+        text-align: center;
+        font-family: $fonts_primary;
+        color: $colors_secondary;
+        background-color: $colors_primary;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    h2 {
+        font-size: 16px;
+        padding-left: 2em;
+        font-family: $fonts_secondary;
+        color: $colors_secondary;
+        background-color: $colors_tertiary;
+    }
+    p {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 2em;
+        a {
+            color: $colors_primary;
+            text-decoration: none;
+        }
+    }
+    ul {
+        margin-left: 2em;
+        list-style-position: inside;
+        list-style-type: square;
+        color: $colors_primary;
+        li {
+            margin-top: 1em;
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

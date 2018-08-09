@@ -58,7 +58,7 @@ class QuizSetup extends Component {
                             <option value="boolean">true or false </option>
                         </select>
                     </label>
-                    <button type="submit" onClick={this.props.handleSubmit}> Start Quiz! </button>
+                    <button type="submit" onClick={this.props.handleSubmit}>Get Questions!</button>
                 </form>
             )} else {
                 return (
