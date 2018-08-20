@@ -8,11 +8,11 @@ SlowQuiz is a simple quiz app built with React using the OpenTDB API found at ht
 
 ### Desktop Version
 
-![desktop](https://media.giphy.com/media/2vjmaa6RHuwHVUcH3Y/giphy.gif)
+![desktop](https://media.giphy.com/media/2Yd20bLHxlCIKzHd8L/giphy.gif)
 
 ### Mobile Version
 
-![mobile](https://media.giphy.com/media/2wZp23MUC2YoGVBNOp/giphy.gif)
+![mobile](https://media.giphy.com/media/3kIXThHUrEKFddPkJK/giphy.gif)
 
 ## To-Do
 * Create functionality for sessions so that quiz stats are saved on page reload, and to help remove repeat questions
